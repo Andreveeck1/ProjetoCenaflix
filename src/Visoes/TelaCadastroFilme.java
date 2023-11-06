@@ -21,6 +21,7 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
         initComponents();
         
         controlador = new ControladorTelaCadastroFilme(this);
+      //  controlador.mostraPopUpMeny();
     }
 
     /**
@@ -32,6 +33,16 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenuEscolheCategoria = new javax.swing.JPopupMenu();
+        jMenuItemAcao = new javax.swing.JMenuItem();
+        jMenuItemAventura = new javax.swing.JMenuItem();
+        jMenuItemComedia = new javax.swing.JMenuItem();
+        jMenuItemDocumentario = new javax.swing.JMenuItem();
+        jMenuItemFiccaoCientifica = new javax.swing.JMenuItem();
+        jMenuItemTerror = new javax.swing.JMenuItem();
+        jButtonCategorias = new javax.swing.JButton();
+        jButtonAtualizarExcluirCadastroFilme = new javax.swing.JButton();
+        jButtonExibeListaFilmes = new javax.swing.JButton();
         jLabelSubtitulo1 = new javax.swing.JLabel();
         jButtonLimpar = new javax.swing.JButton();
         jButtonCadastrar = new javax.swing.JButton();
@@ -42,11 +53,89 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
         jLabelSubtitulo = new javax.swing.JLabel();
         jLabelTitulo1 = new javax.swing.JLabel();
         jLabelTitulo = new javax.swing.JLabel();
-        jLabelFundo = new javax.swing.JLabel();
+
+        jMenuItemAcao.setLabel("Ação");
+        jMenuItemAcao.setName(""); // NOI18N
+        jMenuItemAcao.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemAcaoMousePressed(evt);
+            }
+        });
+        jPopupMenuEscolheCategoria.add(jMenuItemAcao);
+
+        jMenuItemAventura.setLabel("Aventura");
+        jMenuItemAventura.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemAventuraMousePressed(evt);
+            }
+        });
+        jPopupMenuEscolheCategoria.add(jMenuItemAventura);
+
+        jMenuItemComedia.setLabel("Comédia");
+        jMenuItemComedia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemComediaMousePressed(evt);
+            }
+        });
+        jPopupMenuEscolheCategoria.add(jMenuItemComedia);
+        jMenuItemComedia.getAccessibleContext().setAccessibleName("comédia");
+
+        jMenuItemDocumentario.setLabel("Documentário");
+        jMenuItemDocumentario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemDocumentarioMousePressed(evt);
+            }
+        });
+        jPopupMenuEscolheCategoria.add(jMenuItemDocumentario);
+
+        jMenuItemFiccaoCientifica.setLabel("Ficção científica");
+        jMenuItemFiccaoCientifica.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemFiccaoCientificaMousePressed(evt);
+            }
+        });
+        jPopupMenuEscolheCategoria.add(jMenuItemFiccaoCientifica);
+
+        jMenuItemTerror.setLabel("Terror");
+        jMenuItemTerror.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenuItemTerrorMousePressed(evt);
+            }
+        });
+        jPopupMenuEscolheCategoria.add(jMenuItemTerror);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(700, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButtonCategorias.setText("Categorias");
+        jButtonCategorias.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jButtonCategoriasMouseMoved(evt);
+            }
+        });
+        jButtonCategorias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCategoriasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonCategorias, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        jButtonAtualizarExcluirCadastroFilme.setText("Atualizar ou excluir cadastro de filme");
+        jButtonAtualizarExcluirCadastroFilme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAtualizarExcluirCadastroFilmeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonAtualizarExcluirCadastroFilme, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 420, -1, -1));
+
+        jButtonExibeListaFilmes.setText("Exibe lista de filmes cadastrados");
+        jButtonExibeListaFilmes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExibeListaFilmesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonExibeListaFilmes, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, -1, -1));
 
         jLabelSubtitulo1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabelSubtitulo1.setText("Data de lançamento:");
@@ -58,7 +147,7 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
                 jButtonLimparActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 360, 80, -1));
+        getContentPane().add(jButtonLimpar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, 80, -1));
 
         jButtonCadastrar.setText("Cadastrar");
         jButtonCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -66,7 +155,7 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
                 jButtonCadastrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 360, -1, -1));
+        getContentPane().add(jButtonCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, -1, -1));
 
         try {
             jFormattedTextFieldDataLancamento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -89,7 +178,7 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
 
         jLabelSubtitulo.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabelSubtitulo.setText("Nome do filme:");
-        getContentPane().add(jLabelSubtitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 130, -1));
+        getContentPane().add(jLabelSubtitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 170, -1));
 
         jLabelTitulo1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabelTitulo1.setText("Cadastro de  filme");
@@ -98,9 +187,6 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
         jLabelTitulo.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabelTitulo.setText("Cenaflix");
         getContentPane().add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 190, 40));
-
-        jLabelFundo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        getContentPane().add(jLabelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -116,6 +202,50 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
     private void jButtonLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimparActionPerformed
        controlador.limparCampos();
     }//GEN-LAST:event_jButtonLimparActionPerformed
+
+    private void jButtonExibeListaFilmesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExibeListaFilmesActionPerformed
+        controlador.mostrarListaFilmesNaTela();
+    }//GEN-LAST:event_jButtonExibeListaFilmesActionPerformed
+
+    private void jButtonAtualizarExcluirCadastroFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAtualizarExcluirCadastroFilmeActionPerformed
+        TelaAtualizacaoExclusao telaAtualizacaoExclusao = new TelaAtualizacaoExclusao();
+        telaAtualizacaoExclusao.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonAtualizarExcluirCadastroFilmeActionPerformed
+
+    private void jMenuItemAcaoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemAcaoMousePressed
+        controlador.mostraFilmesAcao();
+    }//GEN-LAST:event_jMenuItemAcaoMousePressed
+
+    private void jMenuItemComediaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemComediaMousePressed
+        controlador.mostraFilmesComedia();
+    }//GEN-LAST:event_jMenuItemComediaMousePressed
+
+    private void jMenuItemAventuraMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemAventuraMousePressed
+        controlador.mostraFilmesAventura();
+    }//GEN-LAST:event_jMenuItemAventuraMousePressed
+
+    private void jMenuItemTerrorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemTerrorMousePressed
+     controlador.mostraFilmesTerror();
+    }//GEN-LAST:event_jMenuItemTerrorMousePressed
+
+    private void jMenuItemDocumentarioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemDocumentarioMousePressed
+        controlador.mostraFilmesDocumentario();
+    }//GEN-LAST:event_jMenuItemDocumentarioMousePressed
+
+    private void jMenuItemFiccaoCientificaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItemFiccaoCientificaMousePressed
+        controlador.mostraFilmesFiccaoCientifica();
+    }//GEN-LAST:event_jMenuItemFiccaoCientificaMousePressed
+
+    private void jButtonCategoriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCategoriasActionPerformed
+      
+          jPopupMenuEscolheCategoria.show(this, 50, 50);
+        
+    }//GEN-LAST:event_jButtonCategoriasActionPerformed
+
+    private void jButtonCategoriasMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonCategoriasMouseMoved
+        jPopupMenuEscolheCategoria.show(this, 50, 50);
+    }//GEN-LAST:event_jButtonCategoriasMouseMoved
 
     /**
      * @param args the command line arguments
@@ -177,15 +307,24 @@ public class TelaCadastroFilme extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonAtualizarExcluirCadastroFilme;
     private javax.swing.JButton jButtonCadastrar;
+    private javax.swing.JButton jButtonCategorias;
+    private javax.swing.JButton jButtonExibeListaFilmes;
     private javax.swing.JButton jButtonLimpar;
     private javax.swing.JFormattedTextField jFormattedTextFieldDataLancamento;
-    private javax.swing.JLabel jLabelFundo;
     private javax.swing.JLabel jLabelSubtitulo;
     private javax.swing.JLabel jLabelSubtitulo1;
     private javax.swing.JLabel jLabelSubtitulo2;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JLabel jLabelTitulo1;
+    private javax.swing.JMenuItem jMenuItemAcao;
+    private javax.swing.JMenuItem jMenuItemAventura;
+    private javax.swing.JMenuItem jMenuItemComedia;
+    private javax.swing.JMenuItem jMenuItemDocumentario;
+    private javax.swing.JMenuItem jMenuItemFiccaoCientifica;
+    private javax.swing.JMenuItem jMenuItemTerror;
+    private javax.swing.JPopupMenu jPopupMenuEscolheCategoria;
     private javax.swing.JTextField jTextFieldCategoria;
     private javax.swing.JTextField jTextFieldNomeFilme;
     // End of variables declaration//GEN-END:variables

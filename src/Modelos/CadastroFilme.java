@@ -20,6 +20,20 @@ public class CadastroFilme {
         this.categoria = categoria;
     }
 
+    public CadastroFilme(int id, String nome, String dataLancamento, String categoria) {
+        this.id = id;
+        this.nome = nome;
+        this.dataLancamento = dataLancamento;
+        this.categoria = categoria;
+    }
+
+    public CadastroFilme(int id) {
+        this.id = id;
+    }
+    
+    
+    
+
     public int getId() {
         return id;
     }
